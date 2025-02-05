@@ -40,3 +40,10 @@
 .menu-toggle{
     color:aliceblue;
 }
+
+/* Redimensiona todas as imagens dentro da classe .product-card */
+.product-card img {
+    width: 30%;  /* Ajusta a largura da imagem para 100% do seu contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    max-width: 200px; /* Define um limite máximo de largura (ajuste conforme necessário) */
+}
