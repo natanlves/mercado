@@ -42,8 +42,103 @@
 }
 
 /* Redimensiona todas as imagens dentro da classe .product-card */
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    gap: 20px; /* Espaçamento entre os produtos */
+    justify-content: space-between; /* Distribui os produtos uniformemente */
+}
+
+.product-card {
+    width: 30%; /* Cada produto ocupa 30% da linha, permitindo 3 por linha */
+    box-sizing: border-box; /* Garante que padding e bordas não afetem o tamanho */
+    text-align: center; /* Centraliza os textos */
+    background: #f9f9f9; /* Cor de fundo leve */
+    padding: 15px;
+    border-radius: 10px; /* Borda arredondada */
+}
+
 .product-card img {
-    width: 30%;  /* Ajusta a largura da imagem para 100% do seu contêiner */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    max-width: 200px; /* Define um limite máximo de largura (ajuste conforme necessário) */
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: auto;
+    max-width: 200px; /* Define um tamanho máximo */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+/* Estilo do footer seguindo o padrão da navbar */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade */
+    padding: 10px 0;
+}
+
+/* Estilo do nome/logo */
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links do footer */
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-links li a:hover {
+    background-color: #575757;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Ícones sociais */
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #aaa;
+}
+
+/* Texto de copyright */
+.footer-copy {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* Faz com que o body ocupe toda a altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o conteúdo crescer e empurra o footer para baixo */
+main {
+    flex: 1;
 }

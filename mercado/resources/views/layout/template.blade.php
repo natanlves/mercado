@@ -15,7 +15,7 @@
                     <li><a href="">Home</a></li>
                     <li><a href="">Mercado</a></li>
                     <li><a href="">Celulares</a></li>
-                    <li><a href="">Eletrodomesticos</a></li>
+                    <li><a href="/e">Eletrodomesticos</a></li>
                 </ul>
                 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             </nav>
@@ -24,28 +24,31 @@
         
         <!--conteudo-->
         <main>
-    <div class="products-container">
-        <div class="product-card">
-            <img src="{{ asset('images/produto1.webp') }}" alt="Produto 1">
-            <h3>Geladeira Consul CRB39AB Frost Free 342L 220V1</h3>
-            <p>Descrição do Produto 1</p>
-            <button class="add-to-cart">Adicionar ao Carrinho</button>
-        </div>
-        <div class="product-card">
-            <img src="{{ asset('images/produto2.webp') }}" alt="Produto 2">
-            <h3>Geladeira/Refrigerador Electrolux Tf56s Top Freezer Frost Free 474L Platinum</h3>
-            <p>Descrição do Produto 2</p>
-            <button class="add-to-cart">Adicionar ao Carrinho</button>
-        </div>
-        <div class="product-card">
-            <img src="{{ asset('images/produto3.jpg') }}" alt="Produto 3">
-            <h3>Geladeira Brastemp Frost Free French Door</h3>
-            <p>Descrição do Produto 3</p>
-            <button class="add-to-cart">Adicionar ao Carrinho</button>
-        </div>
-    </div>
-</main>
+            @yield('content')
+        </main>
 
+        <footer class="footer">
+            
+        <div class="footer-container">
+            <div class="footer-logo">
+                Mercado X
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+            </ul>
+            <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+        </div>
+            <p class="footer-copy">&copy; {{ date('Y') }} Mercado X - Todos os direitos reservados.</p>
+        </footer>
+
+        <!-- Adicionar Font Awesome para ícones sociais -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     </body>
 </html>
