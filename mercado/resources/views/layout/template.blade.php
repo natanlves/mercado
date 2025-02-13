@@ -20,19 +20,25 @@
                     <li><a href="/e">Eletrodomesticos</a></li>
                 </ul>
                 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-                <div id="menu" style="display:none;">
-                    <ul>
-                        @if(Auth::check())
-                        <li>Olá, {{ Auth::user()->name }}</li>
-                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a></li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                        </form>
-                        @else
-                        <li><a href="{{ route('login') }}">Entrar</a></li>
-                        @endif
-                    </ul>
-                </div>
+<div id="menu">
+    <ul>
+        @if(Auth::check())
+            <li>Olá, {{ Auth::user()->name }}</li>
+            <li>
+                <a href="{{ route('logout') }}" 
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                   Sair
+                </a>
+            </li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        @else
+            <li><a href="{{ route('login') }}">Entrar</a></li>
+        @endif
+    </ul>
+</div>
+
             </nav>
         </header>
        
